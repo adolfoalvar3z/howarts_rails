@@ -1,107 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harry Potter Fan Club</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      background-image: url('background.jpg');
-      background-size: cover;
-      background-position: center;
-      font-family: 'Garamond', serif;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-    }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Fan Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+        background-image: linear-gradient(135deg, #d63e26, #ff5a3d);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
-    .container {
-      width: 90%;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-      padding-top: 100px;
-    }
+          .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 100px;
+          }
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
+          h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+          }
 
-    p {
-      font-size: 24px;
-      margin-bottom: 40px;
-    }
+          p {
+            font-size: 24px;
+            margin-bottom: 40px;
+          }
 
-    table {
-      width: 100%;
-      margin-bottom: 40px;
-      border-collapse: collapse;
-    }
+          table {
+            width: 100%;
+            margin-bottom: 40px;
+            border-collapse: collapse;
+          }
 
-    th, td {
-      padding: 10px;
-      border: 1px solid #ffffff;
-    }
+          th, td {
+            padding: 10px;
+            border: 1px solid #ffffff;
+          }
 
-    th {
-      background-color: #d63e26;
-      font-weight: bold;
-    }
+          th {
+            background-color: #d63e26;
+            font-weight: bold;
+          }
 
-    tr:nth-child(even) {
-      background-color: #ff5a3d;
-    }
+          tr:nth-child(even) {
+            background-color: #ff5a3d;
+          }
 
-    .cta-button {
-      display: inline-block;
-      background-color: #d63e26;
-      color: #ffffff;
-      font-size: 24px;
-      font-weight: bold;
-      padding: 15px 30px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
+          .cta-button {
+            display: inline-block;
+            background-color: #d63e26;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+          }
 
-    .cta-button:hover {
-      background-color: #ff5a3d;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Welcome to the Harry Potter Fan Club!</h1>
-    <p>Join us in the magical world of Harry Potter and discover the wonders of Hogwarts School of Witchcraft and Wizardry.</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Location</th>
-          <th>House</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Harry Potter</td>
-          <td>Privet Drive</td>
-          <td>Gryffindor</td>
-        </tr>
-        <tr>
-          <td>Hermione Granger</td>
-          <td>London</td>
-          <td>Gryffindor</td>
-        </tr>
-        <tr>
-          <td>Ron Weasley</td>
-          <td>The Burrow</td>
-          <td>Gryffindor</td>
-        </tr>
-      </tbody>
-    </table>
-    <a class="cta-button" href="#">Join Now</a>
-  </div>
-</body>
+          .cta-button:hover {
+            background-color: #ff5a3d;
+          }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Desafio de deploy con Fake en RoR!</h1>
+      <p>La siguiente información ha sido generada con la gema Fake:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>House</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% characteres.each do |char| %>
+          <tr>
+            <td><%= char.name %></td>
+            <td><%= char.location %></td>
+            <td><%= char.house %></td>
+          </tr>
+          <% end %>
+
+        </tbody>
+      </table>
+    </div>
+  </body>
 </html>
