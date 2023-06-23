@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harry Potter - Howarts Rails</title>
+  <title>Harry Potter Fan Club</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      background-image: url('https://images.ctfassets.net/usf1vwtuqyxm/7tBebKTKUKG6UtMfT4uIrn/cbe472185e1ae71d07a76982d1d6ca92/USH_Hogwarts_VB.jpg');
+      background-image: url('background.jpg');
       background-size: cover;
       background-position: center;
       font-family: 'Garamond', serif;
@@ -34,6 +34,26 @@
       margin-bottom: 40px;
     }
 
+    table {
+      width: 100%;
+      margin-bottom: 40px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ffffff;
+    }
+
+    th {
+      background-color: #d63e26;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #ff5a3d;
+    }
+
     .cta-button {
       display: inline-block;
       background-color: #d63e26;
@@ -55,6 +75,32 @@
   <div class="container">
     <h1>Welcome to the Harry Potter Fan Club!</h1>
     <p>Join us in the magical world of Harry Potter and discover the wonders of Hogwarts School of Witchcraft and Wizardry.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th>House</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Harry Potter</td>
+          <td>Privet Drive</td>
+          <td>Gryffindor</td>
+        </tr>
+        <tr>
+          <td>Hermione Granger</td>
+          <td>London</td>
+          <td>Gryffindor</td>
+        </tr>
+        <tr>
+          <td>Ron Weasley</td>
+          <td>The Burrow</td>
+          <td>Gryffindor</td>
+        </tr>
+      </tbody>
+    </table>
     <a class="cta-button" href="#">Join Now</a>
   </div>
 </body>
