@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
+  url: postgres://postgres_klam_user:PrjsvACI0YG6QOFM7FmawpsYcirmol5T@dpg-cib15rdph6eqchqvefo0-a/postgres_klam
   database: howarts_development
   username: leon
   password: leon
