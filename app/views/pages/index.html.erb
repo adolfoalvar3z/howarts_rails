@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 04 || Harry Potter - HOWARDS RAILS</title>
 
-  </head>
-  <body>
-    <div class="container">
       <h1>Desafio de deploy con Fake en RoR!</h1>
       <p>La siguiente información ha sido generada con la gema Fake:</p>
       <table>
@@ -21,14 +12,29 @@
         <tbody>
           <% @characteres.each do |char| %>
           <tr>
-            <td><%= char.name %></td>
+            <td><h3><%= char.name %></h3></td>
             <td><%= char.location %></td>
-            <td><%= char.house %></td>
-          </tr>
+            <% case char.house %>
+              <% when "Gryffindor"%>
+                <td> <%= image_tag("Gryffindor.png", alt: char.house, title: char.house, height:200)%>
+              <% when "Hufflepuff"%>
+                <td> <%= image_tag("Hufflepuff.png", alt: char.house, title: char.house, height:200)%>
+              <% when "Slytherin"%>
+                <td> <%= image_tag("Slytherin.png", alt: char.house, title: char.house, height:200)%>
+              <% when "Ravenclaw"%>
+                <td> <%= image_tag("Ravenclaw.png", alt: char.house, title: char.house, height:200)%>
+              <% when "Horned Serpent"%>
+                <td> <%= image_tag("Horned Serpent.webp", alt: char.house, title: char.house, height:200)%>
+              <% when "Pukwudgie"%>
+                <td> <%= image_tag("Pukwudgie.webp", alt: char.house, title: char.house, height:200)%>
+              <% when "Wampus"%>
+                <td> <%= image_tag("Wampus.webp", alt: char.house, title: char.house, height:200)%>
+              <% when "Thunderbird"%>
+                <td> <%= image_tag("Thunderbird.webp", alt: char.house, title: char.house, height:200)%>
+              <% else %>
+                <td> <%= image_tag("desconocido.webp", alt: char.house, title: char.house, height:200)%>
+            <% end %>
+            </tr>
           <% end %>
-
         </tbody>
       </table>
-    </div>
-  </body>
-</html>

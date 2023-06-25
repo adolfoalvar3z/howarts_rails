@@ -72,3 +72,6 @@
       .cta-button:hover {
         background-color: #ff5a3d;
       }
+      h3, h1, p, table{
+        color: #fff;
+      }
