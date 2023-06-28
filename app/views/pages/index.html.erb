@@ -1,9 +1,10 @@
 
       <h1>Desafio de deploy con Fake en RoR!</h1>
       <p>La siguiente información ha sido generada con la gema Fake:</p>
-      <table>
+      <div class="table-responsive">
+      <table class="table">
         <thead>
-          <tr>
+          <tr class="text-white">
             <th>Name</th>
             <th>Location</th>
             <th>House</th>
@@ -11,7 +12,7 @@
         </thead>
         <tbody>
           <% @characteres.each do |char| %>
-          <tr>
+          <tr class="text-white">
             <td><h3><%= char.name %></h3></td>
             <td><%= char.location %></td>
             <% case char.house %>
@@ -38,3 +39,4 @@
           <% end %>
         </tbody>
       </table>
+</div>
